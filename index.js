@@ -13,6 +13,10 @@ routes(server);
 //listeningServer
 server.listen(4000, () => {
   console.log("Ecoute sur le port 4000");
+  mongoose.connect("mongodb://localhost/backtest", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
   mongoose.connection
     .once("open", () => console.log("Connexion à MongoDB ok"))
     .on("error", (error) =>

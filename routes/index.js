@@ -1,11 +1,11 @@
 //Import tools
-
+const UserController = require("../controllers/user");
 //Import models
 
 //export model
 module.exports = (server) => {
   //User Create
-  server.post("/users", async (req, res) => {
+  server.post("/user", async (req, res) => {
     UserController.create(req, res);
   });
 };
