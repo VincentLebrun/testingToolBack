@@ -2,6 +2,13 @@
 const User = require("../models/user");
 
 module.exports = {
+  //get user
+  get(req, res) {
+    const id = req.params.id;
+    User.find(id).then((user) => {
+      res.send(user);
+    });
+  },
   //User controllers create
   create(req, res) {
     console.log(req.body);

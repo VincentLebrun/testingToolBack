@@ -8,4 +8,7 @@ module.exports = (server) => {
   server.post("/user", async (req, res) => {
     UserController.create(req, res);
   });
+  server.get("/user", async (req, res) => {
+    UserController.get(req, res);
+  });
 };
