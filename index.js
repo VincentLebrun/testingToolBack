@@ -2,11 +2,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const server = express();
-
+const cors = require("cors");
 //import routes
 const routes = require("./routes/index");
 
 //UseServer
+server.use(cors());
 server.use(express.json());
 routes(server);
 
