@@ -32,8 +32,10 @@ module.exports = {
             mail: req.body.mail,
             password: req.body.password,
           });
-          res.send({
-            result: `Création de l'utilisateur ${user.firstname}`,
+          user.save().then(() => {
+            res.send({
+              result: `Création de l'utilisateur ${user.firstname}`,
+            });
           });
         }
       });
