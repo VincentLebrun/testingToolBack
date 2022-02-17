@@ -24,3 +24,9 @@ server.listen(4000, () => {
       console.warn("Problème durant la connexion", error)
     );
 });
+server.get("/bonjour", (req, res) => {
+  // console.log("Hello World !");
+  res.send({
+    result: "Hello World !",
+  });
+});
