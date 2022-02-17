@@ -5,13 +5,13 @@ const UserController = require("../controllers/user");
 //export model
 module.exports = (server) => {
   //User Create
-  server.get("/user", (req, res) => {
+  server.get("/users", (req, res) => {
     UserController.getAll(req, res);
   });
-  server.get("/user/:id", (req, res) => {
+  server.get("/users/:id", (req, res) => {
     UserController.get(req, res);
   });
-  server.post("/user", async (req, res) => {
+  server.post("/users", async (req, res) => {
     UserController.create(req, res);
   });
 };

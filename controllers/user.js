@@ -3,8 +3,8 @@ const User = require("../models/user");
 
 module.exports = {
   getAll(req, res) {
-    User.find().then((user) => {
-      res.send(user);
+    User.find().then((users) => {
+      res.send(users);
     });
   },
   //get user
